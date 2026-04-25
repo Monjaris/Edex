@@ -4,10 +4,10 @@ int main()
 {
     SetConfigFlags(
         FLAG_WINDOW_RESIZABLE
-        | FLAG_WINDOW_HIGHDPI
+        | FLAG_VSYNC_HINT
     );
-    SetExitKey(0);
     InitWindow(init_win_w, init_win_h, "");
+    // SetExitKey(0);
     if (is_fps_capped) SetTargetFPS(target_fps);
 
     std::cout << "\033[37m";  // Set terminal font color white

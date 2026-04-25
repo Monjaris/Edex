@@ -316,6 +316,8 @@ struct TextBuffer {
             font_family, CAST(int, font_size * font_glyph_k+0.5f),
             nullptr, 0
         );
+        SetTextureFilter(this->font.texture, TEXTURE_FILTER_BILINEAR);
+
         this->reload(true);
     }
 
