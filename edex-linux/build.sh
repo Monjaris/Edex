@@ -14,9 +14,8 @@ FLAGS=" \
 # Compile all
 g++ $SRC_FILES $INCLUDE_DIRS \
 $CPP_VERSION $OPTIMIZE $DEBUG $FLAGS \
--DEDEX_DEFAULT_BUFFER_FONT=\"/usr/share/edex/fonts/JetBrainsMono/JetBrainsMono-Regular.ttf\" \
--DEDEX_DEFAULT_UI_FONT=\"/usr/share/edex/fonts/InterVariable/InterVariable.ttf\" \
 -lraylib -lGL -lm -lpthread -ldl -lrt -o "$BIN_DIR"/main
+
 
 iscompiled=$?
 

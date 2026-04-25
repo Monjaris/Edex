@@ -28,8 +28,14 @@
 #define CAST(type, value)  (static_cast<type>(value))
 #define FEQ(flt1, flt2)  (std::fabsf(flt1 - flt2) < 0.01f)  // f1==f2 is unprecise
 
-#define EDEX_DEFAULT_BUFFER_FONT "assets/fonts/JetBrainsMono/JetBrainsMono-Regular.ttf"
-#define EDEX_DEFAULT_UI_FONT "assets/fonts/InterVariable/InterVariable.ttf"
+// Set defaault fonts based on the development or application
+#ifndef EDEX_DEFAULT_BUFFER_FONT
+    #define EDEX_DEFAULT_BUFFER_FONT "./assets/fonts/JetBrainsMono/JetBrainsMono-Regular.ttf"
+#endif
+#ifndef EDEX_DEFAULT_UI_FONT
+    #define EDEX_DEFAULT_UI_FONT "./assets/fonts/InterVariable/InterVariable.ttf"
+#endif
+
 #define EDEX_DEFAULT_BUFFER_NAME "file.edex.cc"
 #define EDEX_FONT_SIZE_MIN 2
 
