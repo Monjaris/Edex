@@ -5,3 +5,24 @@ I have planned ligatures beforehand yet now the project is abondoned for some re
 One of them is that it started as toy project and then the modules like `struct Buffer` or `struct Cursor` happened to collapse.
 I could've rework on it but i learnt so many things from this project and i thought it's time to say goodbye to it!
 
+# Usage
+Edex is minimalist text editor, therefore i didn't bother with putting keyboard shortcuts to
+some help menu. Here are all of them:
+
+### Shortcuts
+Ctrl+Q          ->  quit
+Ctrl+T          ->  new-tab
+Ctrl+S          ->  save-file
+Ctrl+O          ->  open-file
+Ctrl+Tab        ->  next-tab
+Ctrl+Shift+Tab  ->  prev-tab
+
+### Navigation
+[Arrow Keys]      ->  move cursor
+Home            ->  start of line
+End             ->  end of line
+
+### Buffer control
+Ctrl+Backspace  ->  delete-word-back
+Ctrl+Delete     ->  delete-word-forward
+
