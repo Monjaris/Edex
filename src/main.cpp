@@ -6,8 +6,8 @@ int main()
         FLAG_WINDOW_RESIZABLE
         | FLAG_VSYNC_HINT
     );
-    InitWindow(init_win_w, init_win_h, "");
-    // SetExitKey(0);
+    InitWindow(init_win_w, init_win_h, "Edex");
+    SetExitKey(0);
     if (is_fps_capped) SetTargetFPS(target_fps);
 
     std::cout << "\033[37m";  // Set terminal font color white
@@ -23,7 +23,7 @@ int main()
         editor.Loop();
         BeginDrawing();
         ClearBackground(bg_color);
-        SetWindowTitle(ftos(fps));
+        // SetWindowTitle(ftos(fps));
         editor.Render();
         EndDrawing();
     }
