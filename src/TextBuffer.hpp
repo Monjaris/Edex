@@ -312,6 +312,12 @@ struct TextBuffer {
         log "Font path: " << font_family << "\n";
         log "Font exists: " << stdfs::exists(font_family) << "\n";
 
+        if (!stdfs::exists(font_family)) {
+            std::cerr << "\033[1;31mFATAL: Font file not found: " << font_family
+            << "\nThe editor cannot start without a valid font.\033[0m\n";
+            CloseWindow(); std::exit(1);
+        }
+
         this->font = LoadFontEx(
             font_family, CAST(int, font_size * font_glyph_k+0.5f),
             nullptr, 0
